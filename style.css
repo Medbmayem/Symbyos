@@ -88,6 +88,10 @@ header {
     width: auto;
 }
 
+.resultat-impact {
+    color: #FFFFFF; /* ou toute autre couleur hex ou nommée */
+}
+
 .navbar-nav {
     gap: var(--spacing-md);
 }
