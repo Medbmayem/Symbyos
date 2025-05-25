@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYMBYOS - Automatisation Intelligente des Workflows</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec menu de navigation -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="SYMBYOS Logo" height="50">
+                </a>
+                
+                <!-- Bouton hamburger pour mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Menu de navigation unique avec textes dynamiques -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#expertise">
+                                <span class="fr-text">Expertise</span>
+                                <span class="en-text d-none">Expertise</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#savoir-faire">
+                                <span class="fr-text">Savoir faire</span>
+                                <span class="en-text d-none">Know-how</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cas-usage">
+                                <span class="fr-text">Cas d'usage</span>
+                                <span class="en-text d-none">Use Cases</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#methode">
+                                <span class="fr-text">Notre méthode</span>
+                                <span class="en-text d-none">Our Method</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                <span class="fr-text">Contact</span>
+                                <span class="en-text d-none">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Sélecteur de langue -->
+                    <div class="lang-switcher d-flex">
+                        <button id="lang-fr" class="btn btn-sm btn-outline-primary me-2 active">FR</button>
+                        <button id="lang-en" class="btn btn-sm btn-outline-primary">EN</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-5 mt-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <!-- Texte français -->
+                    <div class="col-lg-6 fr-content">
+                        <h1 class="display-4 fw-bold mb-4">Automatisez vos workflows. <span class="text-primary">Libérez votre potentiel.</span></h1>
+                        <p class="lead mb-4">Chez SYMBYOS, nous pensons que l'automatisation n'est pas seulement une technologie, c'est une expérience immersive qui transforme profondément la manière dont les entreprises fonctionnent. Notre mission : transformer vos processus métier en solutions concrètes, immédiatement opérationnelles.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#contact" class="btn btn-primary btn-lg px-4 py-2">Réserver une consultation</a>
+                            <a href="#expertise" class="btn btn-outline-primary btn-lg px-4 py-2">Découvrir nos services</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Texte anglais (masqué par défaut) -->
+                    <div class="col-lg-6 en-content" style="display: none;">
+                        <h1 class="display-4 fw-bold mb-4">Automate Your Workflows. <span class="text-primary">Unlock Your Potential.</span></h1>
+                        <p class="lead mb-4">At SYMBYOS, we believe automation is not just technology, but an immersive experience that profoundly transforms how businesses operate. Our mission: to transform your business processes into concrete, immediately operational solutions.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#contact" class="btn btn-primary btn-lg px-4 py-2">Book Your Consultation</a>
+                            <a href="#expertise" class="btn btn-outline-primary btn-lg px-4 py-2">Get Started Today</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Image -->
+                    <div class="col-lg-6">
+                        <img src="hero_illustration_sobere.png" alt="Automatisation intelligente des processus" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expertise -->
+        <section id="expertise" class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3 fr-content">Notre Expertise</h2>
+                    <h2 class="display-5 fw-bold mb-3 en-content" style="display: none;">Our Expertise</h2>
+                    <p class="lead text-muted fr-content">Des solutions d'automatisation intelligentes pour optimiser vos processus métier</p>
+                    <p class="lead text-muted en-content" style="display: none;">Intelligent automation solutions to optimize your business processes</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Carte 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-4">
+                                    <i class="fas fa-cogs fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="h4 fr-content">Automatisation de Workflows</h3>
+                                <h3 class="h4 en-content" style="display: none;">Workflow Automation</h3>
+                                <p class="text-muted fr-content">Transformez vos processus manuels en workflows automatisés pour gagner en efficacité et réduire les erreurs.</p>
+                                <p class="text-muted en-content" style="display: none;">Transform your manual processes into automated workflows to gain efficiency and reduce errors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carte 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-4">
+                                    <i class="fas fa-robot fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="h4 fr-content">Solutions IA</h3>
+                                <h3 class="h4 en-content" style="display: none;">AI-Powered Solutions</h3>
+                                <p class="text-muted fr-content">Intégrez l'intelligence artificielle dans vos processus pour une prise de décision plus rapide et plus précise.</p>
+                                <p class="text-muted en-content" style="display: none;">Integrate artificial intelligence into your processes for faster and more accurate decision-making.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carte 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-4">
+                                    <i class="fas fa-chart-line fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="h4 fr-content">Conseil Stratégique</h3>
+                                <h3 class="h4 en-content" style="display: none;">Strategic Consulting</h3>
+                                <p class="text-muted fr-content">Bénéficiez de notre expertise pour identifier les opportunités d'automatisation et élaborer une stratégie sur mesure.</p>
+                                <p class="text-muted en-content" style="display: none;">Benefit from our expertise to identify automation opportunities and develop a tailored strategy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Savoir-faire -->
+        <section id="savoir-faire" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3 fr-content">Notre Savoir-faire</h2>
+                    <h2 class="display-5 fw-bold mb-3 en-content" style="display: none;">Our Know-how</h2>
+                    <p class="lead text-muted fr-content">Pourquoi choisir SYMBYOS pour vos projets d'automatisation</p>
+                    <p class="lead text-muted en-content" style="display: none;">Why choose SYMBYOS for your automation projects</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Point 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle bg-primary text-white p-2 me-3">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <h3 class="h5 mb-0 fr-content">Consultants Expérimentés</h3>
+                                    <h3 class="h5 mb-0 en-content" style="display: none;">Experienced Consultants</h3>
+                                </div>
+                                <p class="text-muted fr-content">Notre équipe combine expertise technique et connaissance approfondie des enjeux métier pour vous offrir un accompagnement de qualité.</p>
+                                <p class="text-muted en-content" style="display: none;">Our team combines technical expertise and in-depth knowledge of business challenges to offer you quality support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Point 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle bg-primary text-white p-2 me-3">
+                                        <i class="fas fa-puzzle-piece"></i>
+                                    </div>
+                                    <h3 class="h5 mb-0 fr-content">Solutions Sur Mesure</h3>
+                                    <h3 class="h5 mb-0 en-content" style="display: none;">Customized Solutions</h3>
+                                </div>
+                                <p class="text-muted fr-content">Nous développons des solutions adaptées à vos besoins spécifiques, en tenant compte de vos contraintes et de vos objectifs.</p>
+                                <p class="text-muted en-content" style="display: none;">We develop solutions tailored to your specific needs, taking into account your constraints and objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Point 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle bg-primary text-white p-2 me-3">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                    <h3 class="h5 mb-0 fr-content">Résultats Prouvés</h3>
+                                    <h3 class="h5 mb-0 en-content" style="display: none;">Proven Results</h3>
+                                </div>
+                                <p class="text-muted fr-content">Nos clients constatent un ROI rapide et mesurable, avec des gains de productivité significatifs dès les premières semaines.</p>
+                                <p class="text-muted en-content" style="display: none;">Our clients see a rapid and measurable ROI, with significant productivity gains from the first few weeks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Cas d'usage -->
+        <section id="cas-usage" class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3 fr-content">Cas d'Usage</h2>
+                    <h2 class="display-5 fw-bold mb-3 en-content" style="display: none;">Use Cases</h2>
+                    <p class="lead text-muted fr-content">Des exemples concrets de transformation par l'automatisation</p>
+                    <p class="lead text-muted en-content" style="display: none;">Concrete examples of transformation through automation</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Cas 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h4 mb-3 fr-content">Sales</h3>
+                                <h3 class="h4 mb-3 en-content" style="display: none;">Sales</h3>
+                                <p class="text-muted fr-content">Automatisation du processus de qualification des leads et de suivi client, permettant une augmentation de 35% du taux de conversion.</p>
+                                <p class="text-muted en-content" style="display: none;">Automation of lead qualification and customer follow-up process, enabling a 35% increase in conversion rate.</p>
+                                <div class="bg-primary bg-opacity-10 p-3 rounded mt-3">
+                                    <p class="mb-0 fw-bold text-primary fr-content">Résultat : +35% de conversion et -40% de temps administratif</p>
+                                    <p class="mb-0 fw-bold text-primary en-content" style="display: none;">Result: +35% conversion and -40% administrative time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cas 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h4 mb-3 fr-content">RH</h3>
+                                <h3 class="h4 mb-3 en-content" style="display: none;">HR</h3>
+                                <p class="text-muted fr-content">Digitalisation et automatisation du processus d'onboarding, réduisant le temps d'intégration de 60% et améliorant la satisfaction des nouveaux collaborateurs.</p>
+                                <p class="text-muted en-content" style="display: none;">Digitization and automation of the onboarding process, reducing integration time by 60% and improving new employee satisfaction.</p>
+                                <div class="bg-primary bg-opacity-10 p-3 rounded mt-3">
+                                    <p class="mb-0 fw-bold text-primary fr-content">Résultat : -60% de temps d'intégration et +25% de satisfaction</p>
+                                    <p class="mb-0 fw-bold text-primary en-content" style="display: none;">Result: -60% integration time and +25% satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cas 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h4 mb-3 fr-content">Opérations</h3>
+                                <h3 class="h4 mb-3 en-content" style="display: none;">Operations</h3>
+                                <p class="text-muted fr-content">Automatisation de la gestion des stocks et des commandes fournisseurs, permettant une réduction des ruptures de stock de 80% et une optimisation des coûts de 15%.</p>
+                                <p class="text-muted en-content" style="display: none;">Automation of inventory management and supplier orders, enabling an 80% reduction in stockouts and a 15% cost optimization.</p>
+                                <div class="bg-primary bg-opacity-10 p-3 rounded mt-3">
+                                    <p class="mb-0 fw-bold text-primary fr-content">Résultat : -80% de ruptures de stock et -15% de coûts</p>
+                                    <p class="mb-0 fw-bold text-primary en-content" style="display: none;">Result: -80% stockouts and -15% costs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Notre méthode -->
+        <section id="methode" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3 fr-content">Notre Méthode</h2>
+                    <h2 class="display-5 fw-bold mb-3 en-content" style="display: none;">Our Method</h2>
+                    <p class="lead text-muted fr-content">Une approche structurée en 3 étapes pour garantir votre succès</p>
+                    <p class="lead text-muted en-content" style="display: none;">A structured 3-step approach to ensure your success</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12 position-relative mb-5">
+                        <div class="progress" style="height: 2px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Étape 1 -->
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <span class="h3 mb-0">1</span>
+                            </div>
+                            <h3 class="h4 mb-3 fr-content">Évaluation</h3>
+                            <h3 class="h4 mb-3 en-content" style="display: none;">Assessment</h3>
+                            <p class="text-muted fr-content">Nous analysons vos processus actuels, identifions les opportunités d'automatisation et définissons des objectifs clairs.</p>
+                            <p class="text-muted en-content" style="display: none;">We analyze your current processes, identify automation opportunities, and define clear objectives.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Étape 2 -->
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <span class="h3 mb-0">2</span>
+                            </div>
+                            <h3 class="h4 mb-3 fr-content">Implémentation</h3>
+                            <h3 class="h4 mb-3 en-content" style="display: none;">Implementation</h3>
+                            <p class="text-muted fr-content">Nous concevons et déployons des solutions d'automatisation sur mesure, en assurant une intégration fluide avec vos systèmes existants.</p>
+                            <p class="text-muted en-content" style="display: none;">We design and deploy custom automation solutions, ensuring seamless integration with your existing systems.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Étape 3 -->
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <span class="h3 mb-0">3</span>
+                            </div>
+                            <h3 class="h4 mb-3 fr-content">Optimisation</h3>
+                            <h3 class="h4 mb-3 en-content" style="display: none;">Optimization</h3>
+                            <p class="text-muted fr-content">Nous mesurons les résultats, recueillons vos retours et améliorons continuellement les solutions pour maximiser votre ROI.</p>
+                            <p class="text-muted en-content" style="display: none;">We measure results, gather your feedback, and continuously improve solutions to maximize your ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <h2 class="display-5 fw-bold mb-4 fr-content">Prêt à transformer vos workflows ?</h2>
+                        <h2 class="display-5 fw-bold mb-4 en-content" style="display: none;">Ready to transform your workflows?</h2>
+                        
+                        <p class="lead mb-4 fr-content">Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment SYMBYOS peut vous aider à automatiser vos processus.</p>
+                        <p class="lead mb-4 en-content" style="display: none;">Contact us today to discuss your needs and discover how SYMBYOS can help you automate your processes.</p>
+                        
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="rounded-circle bg-primary text-white p-2 me-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <p class="mb-0">contact@symbyos.com</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="rounded-circle bg-primary text-white p-2 me-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <p class="mb-0">+33 1 23 45 67 89</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle bg-primary text-white p-2 me-3">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <p class="mb-0">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h4 mb-4 fr-content">Demander une démo</h3>
+                                <h3 class="h4 mb-4 en-content" style="display: none;">Request a Demo</h3>
+                                
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="name" class="form-label">
+                                                <span class="fr-text">Nom</span>
+                                                <span class="en-text d-none">Name</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">
+                                                <span class="fr-text">Email</span>
+                                                <span class="en-text d-none">Email</span>
+                                            </label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="company" class="form-label">
+                                                <span class="fr-text">Entreprise</span>
+                                                <span class="en-text d-none">Company</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="company" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label">
+                                                <span class="fr-text">Téléphone</span>
+                                                <span class="en-text d-none">Phone</span>
+                                            </label>
+                                            <input type="tel" class="form-control" id="phone">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="subject" class="form-label">
+                                                <span class="fr-text">Sujet</span>
+                                                <span class="en-text d-none">Subject</span>
+                                            </label>
+                                            <select class="form-select" id="subject" required>
+                                                <option value="" selected disabled class="fr-text">Choisir...</option>
+                                                <option value="" selected disabled class="en-text d-none">Choose...</option>
+                                                <option value="demo" class="fr-text">Demande de démo</option>
+                                                <option value="demo" class="en-text d-none">Demo request</option>
+                                                <option value="info" class="fr-text">Demande d'information</option>
+                                                <option value="info" class="en-text d-none">Information request</option>
+                                                <option value="partnership" class="fr-text">Partenariat</option>
+                                                <option value="partnership" class="en-text d-none">Partnership</option>
+                                                <option value="other" class="fr-text">Autre</option>
+                                                <option value="other" class="en-text d-none">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="message" class="form-label">
+                                                <span class="fr-text">Message</span>
+                                                <span class="en-text d-none">Message</span>
+                                            </label>
+                                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-lg">
+                                                <span class="fr-text">Envoyer</span>
+                                                <span class="en-text d-none">Send</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="logo.png" alt="SYMBYOS Logo" height="50" class="mb-4">
+                    <p class="fr-content">Automatisation intelligente des workflows pour les entreprises en croissance.</p>
+                    <p class="en-content" style="display: none;">Intelligent workflow automation for growing businesses.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fr-content">Liens rapides</h5>
+                    <h5 class="en-content" style="display: none;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#expertise" class="text-white-50">
+                                <span class="fr-text">Expertise</span>
+                                <span class="en-text d-none">Expertise</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#savoir-faire" class="text-white-50">
+                                <span class="fr-text">Savoir faire</span>
+                                <span class="en-text d-none">Know-how</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cas-usage" class="text-white-50">
+                                <span class="fr-text">Cas d'usage</span>
+                                <span class="en-text d-none">Use Cases</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#methode" class="text-white-50">
+                                <span class="fr-text">Notre méthode</span>
+                                <span class="en-text d-none">Our Method</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-white-50">
+                                <span class="fr-text">Contact</span>
+                                <span class="en-text d-none">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>
+                        <span class="fr-text">Contact</span>
+                        <span class="en-text d-none">Contact</span>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@symbyos.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +33 1 23 45 67 89</li>
+                        <li class="mb-4"><i class="fas fa-map-marker-alt me-2"></i> Paris, France</li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 text-white-50">
+                        <span class="fr-text">&copy; 2025 SYMBYOS. Tous droits réservés.</span>
+                        <span class="en-text d-none">&copy; 2025 SYMBYOS. All rights reserved.</span>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">
+                        <span class="fr-text">Mentions légales</span>
+                        <span class="en-text d-none">Legal Notice</span>
+                    </a>
+                    <a href="#" class="text-white-50">
+                        <span class="fr-text">Politique de confidentialité</span>
+                        <span class="en-text d-none">Privacy Policy</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Gestion du changement de langue
+        document.getElementById('lang-fr').addEventListener('click', function() {
+            // Afficher le contenu français
+            document.querySelectorAll('.fr-content').forEach(el => {
+                el.style.display = 'block';
+            });
+            
+            // Masquer le contenu anglais
+            document.querySelectorAll('.en-content').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Afficher les textes français
+            document.querySelectorAll('.fr-text').forEach(el => {
+                el.classList.remove('d-none');
+            });
+            
+            // Masquer les textes anglais
+            document.querySelectorAll('.en-text').forEach(el => {
+                el.classList.add('d-none');
+            });
+            
+            // Mettre à jour les boutons de langue
+            document.getElementById('lang-fr').classList.add('active');
+            document.getElementById('lang-en').classList.remove('active');
+        });
+        
+        document.getElementById('lang-en').addEventListener('click', function() {
+            // Masquer le contenu français
+            document.querySelectorAll('.fr-content').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Afficher le contenu anglais
+            document.querySelectorAll('.en-content').forEach(el => {
+                el.style.display = 'block';
+            });
+            
+            // Masquer les textes français
+            document.querySelectorAll('.fr-text').forEach(el => {
+                el.classList.add('d-none');
+            });
+            
+            // Afficher les textes anglais
+            document.querySelectorAll('.en-text').forEach(el => {
+                el.classList.remove('d-none');
+            });
+            
+            // Mettre à jour les boutons de langue
+            document.getElementById('lang-en').classList.add('active');
+            document.getElementById('lang-fr').classList.remove('active');
+        });
+        
+        // Animation au scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {threshold: 0.1});
+            
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('fade-in');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
